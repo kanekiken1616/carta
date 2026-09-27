@@ -1,0 +1,1201 @@
+/* =====================================
+   CONFIGURACIÓN GENERAL
+===================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+
+    min-height: 100vh;
+
+    color: #e8dfdf;
+
+    font-family:
+        "Georgia",
+        "Times New Roman",
+        serif;
+
+    background:
+
+        radial-gradient(
+            circle at 50% 20%,
+            rgba(91, 19, 35, 0.30),
+            transparent 35%
+        ),
+
+        radial-gradient(
+            circle at 80% 80%,
+            rgba(70, 10, 25, 0.25),
+            transparent 30%
+        ),
+
+        linear-gradient(
+            135deg,
+            #050505,
+            #10080b,
+            #050505,
+            #16090d,
+            #030303
+        );
+
+    background-attachment: fixed;
+}
+
+
+/* =====================================================
+   EFECTO DE SOMBRAS EN TODA LA PÁGINA
+===================================================== */
+
+body::before {
+
+    content: "";
+
+    position: fixed;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    background:
+
+        radial-gradient(
+            ellipse at center,
+            transparent 35%,
+            rgba(0, 0, 0, 0.75) 100%
+        );
+
+    z-index: 999;
+}
+
+
+/* =====================================================
+   MENÚ
+===================================================== */
+
+.menu {
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 1000;
+
+    width: 100%;
+
+    min-height: 78px;
+
+    padding: 15px 45px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    flex-wrap: wrap;
+
+    gap: 15px;
+
+    background:
+
+        linear-gradient(
+            90deg,
+            #030303,
+            #13070a,
+            #030303
+        );
+
+    border-bottom:
+
+        1px solid
+        #6e1728;
+
+    box-shadow:
+
+        0 8px 30px
+        rgba(0, 0, 0, 0.8);
+}
+
+
+/* =====================================================
+   LOGO
+===================================================== */
+
+.logo {
+
+    color: #f1dddd;
+
+    font-size: 19px;
+
+    font-weight: bold;
+
+    letter-spacing: 4px;
+
+    text-shadow:
+
+        0 0 10px
+        rgba(146, 28, 52, 0.8);
+}
+
+
+/* =====================================================
+   ENLACES
+===================================================== */
+
+.links {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 25px;
+}
+
+
+.links a {
+
+    position: relative;
+
+    color: #c9baba;
+
+    text-decoration: none;
+
+    font-size: 12px;
+
+    letter-spacing: 3px;
+
+    text-transform: uppercase;
+
+    transition: 0.4s;
+}
+
+
+.links a::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 50%;
+
+    bottom: -8px;
+
+    width: 0;
+
+    height: 1px;
+
+    background: #a42642;
+
+    transform: translateX(-50%);
+
+    transition: 0.4s;
+}
+
+
+.links a:hover {
+
+    color: #ffffff;
+
+    text-shadow:
+
+        0 0 12px
+        #8c2037;
+}
+
+
+.links a:hover::after {
+
+    width: 100%;
+}
+
+
+/* =====================================================
+   CONTENEDOR PRINCIPAL
+===================================================== */
+
+.contenedor {
+
+    position: relative;
+
+    width: 90%;
+
+    max-width: 900px;
+
+    margin: 75px auto;
+
+    padding: 70px 55px;
+
+    text-align: center;
+
+    background:
+
+        linear-gradient(
+            145deg,
+            rgba(18, 12, 14, 0.98),
+            rgba(7, 7, 7, 0.98)
+        );
+
+    border:
+
+        1px solid
+        rgba(139, 35, 57, 0.6);
+
+    box-shadow:
+
+        0 0 0 1px
+        rgba(255,255,255,0.02),
+
+        0 25px 80px
+        rgba(0,0,0,0.9),
+
+        inset 0 0 60px
+        rgba(94, 16, 34, 0.12);
+
+}
+
+
+/* =====================================================
+   DECORACIÓN DE ESQUINAS
+===================================================== */
+
+.contenedor::before {
+
+    content: "❦";
+
+    position: absolute;
+
+    top: 18px;
+
+    left: 22px;
+
+    color: #8c2037;
+
+    font-size: 28px;
+
+    opacity: 0.8;
+}
+
+
+.contenedor::after {
+
+    content: "❦";
+
+    position: absolute;
+
+    bottom: 18px;
+
+    right: 22px;
+
+    color: #8c2037;
+
+    font-size: 28px;
+
+    opacity: 0.8;
+
+    transform: rotate(180deg);
+}
+
+
+/* =====================================================
+   SALUDO
+===================================================== */
+
+.saludo {
+
+    color: #a98b91;
+
+    font-size: 18px;
+
+    font-style: italic;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 18px;
+
+    text-shadow:
+
+        0 0 10px
+        rgba(145, 31, 53, 0.4);
+}
+
+
+/* =====================================================
+   TÍTULOS
+===================================================== */
+
+h1 {
+
+    color: #eee2e4;
+
+    font-size: 55px;
+
+    font-weight: normal;
+
+    letter-spacing: 10px;
+
+    margin: 20px 0;
+
+    text-transform: uppercase;
+
+    text-shadow:
+
+        0 0 8px rgba(255,255,255,0.08),
+
+        0 0 30px
+        rgba(126, 25, 48, 0.45);
+}
+
+
+.titulo-pagina {
+
+    font-size: 48px;
+
+    letter-spacing: 8px;
+}
+
+
+/* =====================================================
+   SUBTÍTULO
+===================================================== */
+
+.subtitulo {
+
+    color: #8f7d81;
+
+    font-size: 15px;
+
+    font-style: italic;
+
+    letter-spacing: 3px;
+}
+
+
+/* =====================================================
+   ORNAMENTOS
+===================================================== */
+
+.ornamento {
+
+    margin: 35px 0;
+
+    color: #9b2942;
+
+    font-size: 21px;
+
+    letter-spacing: 5px;
+
+    text-shadow:
+
+        0 0 12px
+        rgba(139, 27, 50, 0.5);
+}
+
+
+/* =====================================================
+   SÍMBOLO PRINCIPAL
+===================================================== */
+
+.simbolo {
+
+    font-size: 48px;
+
+    margin-bottom: 15px;
+
+    filter:
+
+        drop-shadow(
+            0 0 12px
+            rgba(136, 28, 50, 0.7)
+        );
+}
+
+
+/* =====================================================
+   CORAZÓN
+===================================================== */
+
+.corazon {
+
+    margin: 35px 0;
+
+    font-size: 72px;
+
+    animation:
+
+        latido 3s ease-in-out infinite;
+
+    filter:
+
+        drop-shadow(
+            0 0 15px
+            rgba(130, 20, 45, 0.8)
+        );
+}
+
+
+@keyframes latido {
+
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.08);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+
+}
+
+
+/* =====================================================
+   FRASES
+===================================================== */
+
+.frase {
+
+    max-width: 680px;
+
+    margin: 35px auto;
+
+    color: #d5c6c9;
+
+    font-size: 23px;
+
+    line-height: 1.9;
+
+    font-style: italic;
+
+    text-shadow:
+
+        0 0 12px
+        rgba(0,0,0,0.8);
+}
+
+
+/* =====================================================
+   TEXTO
+===================================================== */
+
+.texto {
+
+    max-width: 650px;
+
+    margin: 35px auto;
+
+    color: #9f9295;
+
+    font-size: 16px;
+
+    line-height: 2;
+
+}
+
+
+/* =====================================================
+   DECORACIONES
+===================================================== */
+
+.decoracion {
+
+    margin: 40px 0;
+
+    color: #9b2942;
+
+    font-size: 25px;
+
+    letter-spacing: 15px;
+
+    text-shadow:
+
+        0 0 10px
+        rgba(155, 41, 66, 0.5);
+}
+
+
+/* =====================================================
+   BOTONES
+===================================================== */
+
+.boton {
+
+    display: inline-block;
+
+    margin: 8px;
+
+    padding: 15px 30px;
+
+    color: #e8dfe1;
+
+    text-decoration: none;
+
+    background:
+
+        linear-gradient(
+            135deg,
+            #18090d,
+            #090909
+        );
+
+    border:
+
+        1px solid
+        #7e1c32;
+
+    font-size: 12px;
+
+    letter-spacing: 3px;
+
+    text-transform: uppercase;
+
+    box-shadow:
+
+        0 8px 20px
+        rgba(0,0,0,0.6);
+
+    transition: 0.4s;
+}
+
+
+.boton:hover {
+
+    color: white;
+
+    background:
+
+        linear-gradient(
+            135deg,
+            #731b32,
+            #260a11
+        );
+
+    border-color: #b33350;
+
+    box-shadow:
+
+        0 0 25px
+        rgba(143, 30, 55, 0.6);
+
+    transform:
+
+        translateY(-3px);
+}
+
+
+/* =====================================================
+   POEMA
+===================================================== */
+
+.poema-contenido {
+
+    max-width: 650px;
+
+    margin: 45px auto;
+
+    padding: 45px;
+
+    background:
+
+        linear-gradient(
+            145deg,
+            #110a0d,
+            #070707
+        );
+
+    border:
+
+        1px solid
+        rgba(131, 29, 50, 0.5);
+
+    box-shadow:
+
+        inset 0 0 40px
+        rgba(100, 15, 35, 0.1),
+
+        0 20px 40px
+        rgba(0,0,0,0.7);
+}
+
+
+.poema-contenido p {
+
+    margin: 25px 0;
+
+    color: #d2c4c7;
+
+    font-size: 17px;
+
+    line-height: 2;
+
+    font-style: italic;
+}
+
+
+.poema-firma {
+
+    color: #a62b46 !important;
+
+    letter-spacing: 3px;
+}
+
+
+/* =====================================================
+   DISCO DE LA PLAYLIST
+===================================================== */
+
+.disco {
+
+    width: 210px;
+
+    height: 210px;
+
+    margin: 40px auto;
+
+    border-radius: 50%;
+
+    background:
+
+        repeating-radial-gradient(
+            circle,
+            #090909 0px,
+            #090909 4px,
+            #171717 5px,
+            #090909 7px
+        );
+
+    border:
+
+        5px solid
+        #030303;
+
+    box-shadow:
+
+        0 0 30px
+        rgba(132, 25, 48, 0.4),
+
+        0 20px 40px
+        rgba(0,0,0,0.8);
+
+    position: relative;
+
+    animation:
+
+        girar 8s linear infinite;
+}
+
+
+.disco::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 45px;
+
+    height: 45px;
+
+    top: 50%;
+
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    border-radius: 50%;
+
+    background: #72192f;
+
+    border: 8px solid #111;
+
+}
+
+
+.disco::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 8px;
+
+    height: 8px;
+
+    top: 50%;
+
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    border-radius: 50%;
+
+    background: #ded4d6;
+}
+
+
+@keyframes girar {
+
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+
+}
+
+
+/* =====================================================
+   TARJETAS DE CANCIONES
+===================================================== */
+
+.cancion {
+
+    max-width: 680px;
+
+    margin: 28px auto;
+
+    padding: 30px;
+
+    background:
+
+        linear-gradient(
+            135deg,
+            #10090c,
+            #060606
+        );
+
+    border-left:
+
+        3px solid
+        #861e37;
+
+    border-top:
+
+        1px solid
+        rgba(255,255,255,0.04);
+
+    border-right:
+
+        1px solid
+        rgba(255,255,255,0.04);
+
+    border-bottom:
+
+        1px solid
+        rgba(255,255,255,0.04);
+
+    box-shadow:
+
+        0 15px 35px
+        rgba(0,0,0,0.7);
+
+    transition: 0.4s;
+}
+
+
+.cancion:hover {
+
+    transform:
+
+        translateX(5px);
+
+    border-left-color: #bd3655;
+
+    box-shadow:
+
+        0 15px 40px
+        rgba(120, 22, 45, 0.25);
+}
+
+
+.numero {
+
+    display: block;
+
+    color: #8d2940;
+
+    font-size: 11px;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 12px;
+}
+
+
+.cancion h2 {
+
+    color: #e8dfe1;
+
+    font-size: 22px;
+
+    font-weight: normal;
+
+    letter-spacing: 2px;
+
+    margin: 5px 0 8px;
+}
+
+
+.cancion > p {
+
+    color: #8e8084;
+
+    font-style: italic;
+
+    margin-bottom: 20px;
+}
+
+
+.reproductor {
+
+    padding: 18px;
+
+    background: #080808;
+
+    border:
+
+        1px solid
+        #241318;
+}
+
+
+.reproductor p {
+
+    color: #8e7d82;
+
+    margin-bottom: 15px;
+}
+
+
+.spotify-boton {
+
+    display: inline-block;
+
+    padding: 12px 22px;
+
+    color: #eadfe2;
+
+    text-decoration: none;
+
+    background: #711a30;
+
+    border:
+
+        1px solid
+        #9e2b47;
+
+    font-size: 11px;
+
+    letter-spacing: 2px;
+
+    transition: 0.3s;
+}
+
+
+.spotify-boton:hover {
+
+    background: #9c2945;
+
+    box-shadow:
+
+        0 0 20px
+        rgba(156, 41, 69, 0.5);
+}
+
+
+/* =====================================================
+   SPOTIFY
+===================================================== */
+
+.spotify {
+
+    max-width: 680px;
+
+    margin: 40px auto;
+
+    padding: 10px;
+
+    background: #080808;
+
+    border:
+
+        1px solid
+        #501426;
+}
+
+
+.spotify iframe {
+
+    width: 100%;
+
+    height: 352px;
+
+    border: none;
+
+    border-radius: 8px;
+}
+
+
+.nota {
+
+    max-width: 600px;
+
+    margin: 25px auto;
+
+    color: #8e7e82;
+
+    font-style: italic;
+
+    line-height: 1.8;
+}
+
+
+/* =====================================================
+   DESPEDIDA
+===================================================== */
+
+.despedida {
+
+    min-height: 600px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+}
+
+
+.despedida h1 {
+
+    margin-bottom: 25px;
+}
+
+
+.mensaje-final {
+
+    max-width: 620px;
+
+    color: #cdbec2;
+
+    font-size: 20px;
+
+    line-height: 2.1;
+
+    font-style: italic;
+}
+
+
+.luna {
+
+    font-size: 75px;
+
+    margin: 20px;
+
+    filter:
+
+        drop-shadow(
+            0 0 15px
+            rgba(200, 200, 200, 0.3)
+        );
+}
+
+
+/* =====================================================
+   NAVEGACIÓN FINAL
+===================================================== */
+
+.navegacion-final {
+
+    margin-top: 50px;
+
+    display: flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+}
+
+
+/* =====================================================
+   PIE DE PÁGINA
+===================================================== */
+
+footer {
+
+    position: relative;
+
+    z-index: 1;
+
+    width: 100%;
+
+    padding: 40px 20px;
+
+    text-align: center;
+
+    background:
+
+        linear-gradient(
+            90deg,
+            #030303,
+            #12070a,
+            #030303
+        );
+
+    border-top:
+
+        1px solid
+        #68172b;
+
+    color: #d8cbce;
+
+    line-height: 1.9;
+
+    box-shadow:
+
+        0 -10px 30px
+        rgba(0,0,0,0.5);
+}
+
+
+footer strong {
+
+    letter-spacing: 3px;
+}
+
+
+footer span {
+
+    color: #71666a;
+
+    font-size: 12px;
+}
+
+
+/* =====================================================
+   RESPONSIVE / CELULAR
+===================================================== */
+
+@media (max-width: 650px) {
+
+    .menu {
+
+        padding: 20px 15px;
+
+        justify-content: center;
+
+        text-align: center;
+    }
+
+
+    .logo {
+
+        width: 100%;
+
+        font-size: 15px;
+    }
+
+
+    .links {
+
+        gap: 14px;
+    }
+
+
+    .links a {
+
+        font-size: 9px;
+
+        letter-spacing: 2px;
+    }
+
+
+    .contenedor {
+
+        width: 94%;
+
+        margin: 45px auto;
+
+        padding: 45px 20px;
+    }
+
+
+    h1 {
+
+        font-size: 34px;
+
+        letter-spacing: 5px;
+    }
+
+
+    .titulo-pagina {
+
+        font-size: 31px;
+
+        letter-spacing: 5px;
+    }
+
+
+    .frase {
+
+        font-size: 18px;
+    }
+
+
+    .texto {
+
+        font-size: 15px;
+    }
+
+
+    .poema-contenido {
+
+        padding: 25px 18px;
+    }
+
+
+    .disco {
+
+        width: 170px;
+
+        height: 170px;
+    }
+
+
+    .cancion {
+
+        padding: 23px 17px;
+    }
+
+
+    .spotify iframe {
+
+        height: 352px;
+    }
+
+
+    .boton {
+
+        width: 90%;
+
+        max-width: 300px;
+    }
+
+}
